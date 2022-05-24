@@ -1,5 +1,11 @@
 function fibonacci(n) {
-  // type your code here
+  //use if statement to check if the input is smaller than 2
+  if (n < 2) { 
+    //if yes, return the input
+    return n; 
+  }
+  //else, recurse the function decremented n-1 + decemreneted n-2
+  return fibonacci(n - 1) + fibonacci(n - 2); //
 }
 
 if (require.main === module) {
@@ -8,6 +14,9 @@ if (require.main === module) {
   console.log("=>", fibonacci(0));
 
   console.log("");
+
+  // console.log("Expecting: 1");
+  console.log("=>", fibonacci(1));
 
   console.log("Expecting: 1");
   console.log("=>", fibonacci(2));
